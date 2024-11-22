@@ -1,0 +1,44 @@
+type Teacher {
+  id: ID!
+  name: String!
+  email: String!
+  assignments: [Assignment!]
+}
+
+type Student {
+  id: ID!
+  name: String!
+  email: String!
+  scores: [Score!]
+}
+
+type Assignment {
+  id: ID!
+  title: String!
+  description: String
+  teacher: Teacher!
+  scores: [Score!]
+}
+
+type Score {
+  id: ID!
+  student: Student!
+  assignment: Assignment!
+  score: Int!
+  createdAt: String
+  updatedAt: String
+}
+
+type Query {
+  allTeachers: [Teacher!]
+  allStudents: [Student!]
+  allAssignments: [Assignment!]
+  getAssignmentById(id: ID!): Assignment
+}
+
+type Mutation {
+  createAssignment(teacherId: ID!, title: String!, description: String): Assignment!
+  addScore(studentId: ID!, assignmentId: ID!, score: Int!): Score!
+  removeAssignment(id: ID!): Boolean!
+  removeScore(id: ID!): Boolean!
+}
