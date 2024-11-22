@@ -62,14 +62,14 @@ This is a full-stack web application built with GraphQL, PostgreSQL, and SQLAlch
       psql -U postgres
       CREATE DATABASE accelerate_learning;
       CREATE USER max WITH ENCRYPTED PASSWORD 'password';
-      GRANT ALL PRIVILEGES ON DATABASE accelerate_learning TO max;
+      GRANT ALL PRIVILEGES ON DATABASE accelerate_learning TO username;
       \q
       ```
 
 5. **Configure Database URL**:
     Open the `database.py` file and update the `DATABASE_URL` to reflect your PostgreSQL database credentials, e.g.:
     ```python
-    DATABASE_URL = "postgresql://max:password@localhost/accelerate_learning"
+    DATABASE_URL = "postgresql://username:password@localhost/accelerate_learning"
     ```
 
 6. **Run the migrations (if using Alembic)**:
