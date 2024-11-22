@@ -11,7 +11,7 @@ This is a full-stack web application built with GraphQL, PostgreSQL, and SQLAlch
   
 ## Tech Stack
 
-- **Backend**: Python with FastAPI or Flask, SQLAlchemy (for ORM), and GraphQL (via Strawberry or Graphene).
+- **Backend**: Python with FastAPI, SQLAlchemy (for ORM), and GraphQL (via Strawberry or Graphene).
 - **Database**: PostgreSQL.
 - **API**: GraphQL.
 - **ORM**: SQLAlchemy.
